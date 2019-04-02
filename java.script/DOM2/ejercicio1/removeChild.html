@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prueba</title>
+</head>
+<body>
+<ul id="listado">
+	<li>Agua</li>
+	<li>Palomitas</li>
+	<li>Azucar</li>
+	<li>Nata</li>
+</ul>
+<button onclick="lista();">Click</button>
+<script type="text/javascript">
+	function lista() {
+		var list=document.getElementById('listado');
+		list.removeChild(list.childNodes[0]);
+
+	}
+</script>
+
+</body>
+</html>

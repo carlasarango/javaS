@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>actividad2</title>
+</head>
+<body>
+<button onclick="mostrar();">Mostrar info de pantalla y navegador</button>
+<script type="text/javascript">
+	function mostrar() {
+		var ventana= window.open('','','window=500, heigth=500');
+		var info= navigator.userAgent+'<br/>';
+		info+= navigator.appName+'<br/>';
+		info+= navigator.cookieEnabled+'<br/>';
+		info+= navigator.online+'<br/>';
+		info+= navigator.platform+'<br/>';
+		info+= screen.heigth+'<br/>';
+		info+= screen.colorDepth+'<br/>';
+	}
+</script>
+
+
+
+
+</body>
+</html>

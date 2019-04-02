@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad4</title>
+	<style type="text/css">
+		div{
+			border:  1px solid;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div onmouseenter="crear();">
+		<p>Este es un texto, pasa el ratón por encima.</p>
+	</div>
+	
+	<script type="text/javascript">
+		function crear(){
+			document.body.appendChild(document.createElement('div')).textContent="Has pasado el ratón por encima";
+		}
+		
+	</script>
+
+</body>
+</html>

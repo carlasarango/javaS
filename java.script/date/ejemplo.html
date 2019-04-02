@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EJEMPLO</title>
+	<script type="text/javascript">
+		var fin= new Date();
+		fin.setHours(20,20,20,0);
+		function calcular() {
+			var ahora= new Date();
+			var seg= parseInt((fin-ahora)/1000);
+			var segundos=seg%60; 
+			var minutos=parseInt(seg/60)%60;
+			var horas= parseInt(seg/3600)%24;
+			if(segundos<10)segundos='0'+segundos;
+			if (minutos<10)minutos='0'+minutos;
+			if (horas<10)horas='0'+horas;
+			document.getElementById('segundos').innerHTML=segundos;
+			document.getElementById('minutos').innerHTML=minutos;
+			document.getElementById('horas').innerHTML=horas;
+			
+		}
+		setInterval(calcular,500);
+
+	</script>
+	
+</head>
+<body>
+	<span id="horas">00</span>:
+	<span id="minutos">00</span>:
+	<span id="segundos">00</span>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ACTIVIDAD1</title>
+	<style type="text/css">
+		div{
+			border: 1px solid;
+			padding: 10px;
+			display: inline-block;
+			margin: auto;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+<div onmouseenter="italics(this);" onmouseout="normal(this);">
+	<h1>La cancion del pirata</h1>
+	<p onmouseover="bold(this);" onmouseout="normal(this);">Con diez cañones por banda</p>
+	<p onmouseover="bold(this);" onmouseout="normal(this);">viento en popa a toda vela</p>
+	<p onmouseover="bold(this);" onmouseout="normal(this);">no corta el mar, sino vuela</p>
+	<p onmouseover="bold(this);" onmouseout="normal(this);">un velero Bergantín</p>
+</div>
+<script type="text/javascript">
+	var parrafos=document.getElementsByTagName('p');
+		function italics(elemento){
+		
+		for(let i=0; i<parrafos,length;i++){
+			parrafos[i].style.fontStyle="italic";
+		
+		}
+	}
+
+	function bold(elemento) {
+		elemento.style.fontWeight='bold';
+	}
+	function normal(elemento){
+		elemento.style.fontWeight='normal';
+	}
+	
+	
+
+	
+
+
+
+
+</script>
+</body>
+</html>

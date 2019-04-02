@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ACTIVIDAD1</title>
+	<script type="text/javascript">
+
+		function activar () {
+			var d= new Date();
+			d.setTime(1332403882588);
+			document.getElementById('demo').innerHTML=d;
+			
+		}
+		function hora(){
+			var h= new Date();
+			var o= h.getHours();
+			document.getElementById("demo2").innerHTML=o;
+		}
+		function mes(){
+			var m= new Date();
+			var e=m.getMonth();
+			document.getElementById("demo3").innerHTML=e;
+		}
+
+
+	</script>
+</head>
+<body>
+<h2>setTime:</h2><br>
+<button onclick="activar();">CALCULAR</button>
+<output id="demo"></output>
+<hr>
+<h2>getHours</h2><br>
+<button onclick="hora();">CALCULAR</button>
+<output id="demo2"></output>
+<hr>
+<h2>getMonth</h2><br>
+<button onclick="mes();">CALCULAR</button>
+<output id="demo3"></output>
+<hr>
+
+</body>
+</html>

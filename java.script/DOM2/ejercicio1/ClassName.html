@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prueba</title>
+
+	<style type="text/css">
+		div{ 
+			border: 1px solid black;
+			margin: 5px;
+		 }
+	</style>
+</head>
+<body>
+
+</body>
+</html>
+<h2>getElemensByClassName:</h2>
+<div class="example">
+	<p>Queda poco tiempo para verano.</p>
+</div>
+<div class="example color">
+	<p>Y poder ir ala playa.</p>
+</div>
+<div class="final">
+	<p>Ponerte moreno y viajar lejos</p>
+</div>
+<button onclick="colorea();">Color</button>
+
+<script type="text/javascript">
+	function colorea(){
+			var x= document.getElementsByClassName("example color");
+			x[0].style.backgroundColor="#ffc1d3";
+		}
+</script>

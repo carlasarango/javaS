@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prueba</title>
+</head>
+<body>
+	<h2>element.appendChild</h2>
+	<ul id="lista">
+		<li>café</li>
+		<li>Leche</li>
+	</ul>
+	<button onclick="lista();">LISTA</button>
+	<script type="text/javascript">
+		function lista () {
+			var node=document.createElement("LI");
+			var textnode= document.createTextNode("Agua");
+			node.appendChild(textnode);
+			document.getElementById("lista").appendChild(node);
+			
+		}
+	</script>
+
+</body>
+</html>

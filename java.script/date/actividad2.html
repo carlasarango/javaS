@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RELOJ DIGITAL</title>
+	<script type="text/javascript">
+		function calcular() {
+			var fecha= new Date();
+			var h=fecha.getHours();
+			var m=fecha.getMinutes();
+			var s=fecha.getSeconds();
+			if(h<10){
+				h='0'+h;
+			}
+			if(m<10){
+				m='0'+m;
+			}
+			if(s<10){
+				s='0'+s;
+			}
+
+
+
+
+
+
+
+			document.getElementById('segundos').innerHTML=s;
+
+
+	</script>
+</head>
+<body>
+
+	<span id="horas">00</span>:
+	<output> id="minutos">00</outp>:
+	<span id="segundos">00</span>
+
+</body>
+</html>

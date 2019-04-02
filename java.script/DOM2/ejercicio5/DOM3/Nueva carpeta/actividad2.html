@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad2</title>
+	<style type="text/css">
+		body{
+			background-color: #eeccff;
+
+		}
+		
+		#galeria{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 10px;
+		}
+		#galeria figure{
+			flex: 1;
+			margin: 20px;
+			min-width: 100px;
+		}
+		#galeria figure img{
+			width: 25%;
+			height: 60%;
+		}
+		#grande{
+			position: fixed;
+			text-align: center;
+			width: 40%;
+			height: 60%;
+			top: 20px;
+			background-color: rgba(60,60,60,0.6);
+		}
+		#grande img{
+			height: 80%;
+			color: #ffff00;
+
+
+		}
+	</style>
+</head>
+<body>
+	<h1>GALERY</h1>
+	<section id="galeria">
+		<figure>
+			<img src="foto1.jpg" onclick="mostrar(this.src)" alt="modelo1" >
+		</figure>
+		<figure>
+			<img src="foto2.jpg" onclick="mostrar(this.src)" alt="modelo2">
+		</figure>
+		<figure>
+			<img src="foto3.jpg" onclick="mostrar(this.src)" alt="modelo3">
+		</figure>
+
+	</section>
+	<script type="text/javascript">
+		
+		function mostrar(figura){
+
+			var figuraGrande=document.createElement('img');
+			figuraGrande.src=figura;
+			figuraGrande.setAttribute('id', 'grande');
+
+			document.body.appendChild(figuraGrande);
+
+		figuraGrande.onclick=function(){this.remove();}
+		// var img=document.createElement('img');
+		// // imagen.setAttribute('src', figura.firstElementChild.src);
+		// figuraGrande.appendChild(imagen);
+	}
+	</script>
+
+</body>
+</html>

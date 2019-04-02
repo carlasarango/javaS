@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Galeria</title>
+	<link rel="stylesheet" type="text/css" href="stilogaleria.css">
+
+		<script>
+			window.onload = function(){
+				//recuperar todas figuras de la galería
+				var figuras = document.getElementById('galeria').getElementsByTagName('figure');
+
+				//ponerles el tratamiento de eventos
+				for(var i=0; i<figuras.length; i++){
+					//al hacer click sobre una figura, se debe mostrar en grande
+					figuras[i].onclick = function(){
+						mostrar(this);
+					}
+				}
+			}
+
+
+			function mostrar(figura){
+				//crea la figura a pantalla completa
+				var figuraGrande = document.createElement('figure');
+				figuraGrande.setAttribute('id','grande');
+
+				//al hacer click en la figura grande, ésta se cerrará
+				figuraGrande.onclick = function(){this.remove();}
+
+				//crear la imagen de dentro de la figura grande
+				var imagen = document.createElement('img');
+				imagen.setAttribute('src', figura.firstElementChild.src);
+				
+				//añadir la imagen a la figura grande
+				figuraGrande.appendChild(imagen);				
+
+
+				//recuperar la información y ponerla en un figcaption
+				var leyenda = document.createElement('figcaption');
+				var lugar = figura.firstElementChild.dataset.lugar;
+				var fecha = figura.firstElementChild.dataset.fecha;
+				leyenda.innerHTML = lugar.toUpperCase()+' ('+fecha+')';
+				figuraGrande.appendChild(leyenda);
+
+				//añadir la figura grande al body
+				document.body.appendChild(figuraGrande);
+			}
+
+		</script>
+</head>
+<body>
+	<h1>Últimas promociones</h1>
+<section id="geleria">
+<figure>
+	<img src="oferta1.jpeg">
+</figure>
+<figure>
+	<img src="oferta2.jpeg">
+</figure>
+<figure>
+	<img src="gatos.png" >
+</figure>
+<figure>
+	<img src="aves.jpeg" >
+</figure>
+</section>
+
+</body>
+</html>
+
+
+

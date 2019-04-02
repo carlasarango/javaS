@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad3B</title>
+</head>
+<body>
+<h1>se va a recargar en...<span id="tiempo">10s</span></h1>
+<script>
+	var i=10;
+	setInterval(function () {
+		tiempo.innerHTML=--i+'s';
+		if(i<1){
+			location.reload();
+		}
+	},1000);
+</script>
+</body>
+</html>
